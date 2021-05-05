@@ -34,33 +34,97 @@
 
 // 4MAY2021
 
-function multiply(p1, p2) {
-  return p1 * p2; // The function returns the product of p1 and p2
-}
-console.log(multiply(3, 3));
-// --------------------------------------
-function divide(p1, p2) {
-  return p1 / p2;
-}
-console.log(divide(6, 3));
+// function multiply(p1, p2) {
+//   return p1 * p2; // The function returns the product of p1 and p2
+// }
+// console.log(multiply(3, 3));
+// // --------------------------------------
+// function divide(p1, p2) {
+//   return p1 / p2;
+// }
+// console.log(divide(6, 3));
 
-//   --------------------------
-function multiply(p1, p2) {
-  let multivalue = p1 * p2;
-  return multivalue;
-}
-console.log(multiply(1, 2));
+// //   --------------------------
+// function multiply(p1, p2) {
+//   let multivalue = p1 * p2;
+//   return multivalue;
+// }
+// console.log(multiply(1, 2));
 
-// --------------------------------------
-function factorial(x) 
-{ 
+// ------------05-MAY-2021--------------------------
 
-  if (x === 0)
- {
-    return 1;
- }
-  return x * factorial(x-1);
-         
-}
-console.log(factorial(5));
+// --------PASS-BY-VALUE------------------------------
+
+// function multiply(p1, p2) {
+
+//   p1 = "name";
+//   p2 = "Name2";
+//   value = p1 + p2;
+//   return value; // The function returns the product of p1 and p2
+// }
+
+//   p1 = "firstName";
+//   p2 = "SecondName";
+// let multipliedValue = multiply(p1, p2);
+
+// console.log(multiply(p1, p2));
+
+
+// -----------OBJECTS-------------------
+
+// let fiatCar = { 
+//     type: "Fiat", 
+//     model: "500", 
+//     color: "white" 
+// };
+
+// let peugeorCar = {
+//     type: "Peugeot", 
+//     model: "406", 
+//     color: "Grey",
+//     price: 5000
+// }
+
+listOfCars = [
+  { 
+      type: "Fiat", 
+      model: "500", 
+      color: "white",
+      price: 10000
+  },
+  { 
+      type: "Fiat", 
+      model: "600", 
+      color: "white" 
+  },
+  {
+      type: "Peugeot", 
+      model: "406", 
+      color: "Grey",
+      price: 5000
+  },
+  {
+     invalid: false
+  },
+  {
+
+  }
+]
+
+//Before 
+console.log("Before");
+listOfCars.forEach(car => {
+  console.log(car.type + " " + car.model + " " + car.color + " "+ car.price );
+});
+
+console.log(listOfCars.length);
+
+listOfCars = listOfCars.filter((car) => car.type == "Fiat");
+
+carModelNames = listOfCars.map((car) => car.model);
+
+carModelNames.forEach(carModelName => {
+  console.log(carModelName);
+});
+
 
